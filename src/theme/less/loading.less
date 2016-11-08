@@ -1,0 +1,144 @@
+._br-position(@left, @top, @url) {
+    position: absolute;
+    left: @left;
+    top: @top;
+    width: image-width(@url);
+    height: image-height(@url);
+    background-image: url(@url);
+    background-repeat: no-repeat;
+}
+.an-step {
+    -webkit-animation-timing-function: step-start;
+    animation-timing-function: step-start;
+}
+@HostRes:'images';
+.wasai_loading {
+    z-index: 10001;
+    background-color: black;
+    ._br-position(0px, 0px, 640px, 1140px);
+    .wasai_text {
+        ._br-position(219px, 600px,20px,50px, '@{HostRes}/loading_text.png');
+    }
+    .light {
+        background-size: auto 100%;
+        ._br-position(0px, 0px, 640px, 1140px, '@{HostRes}/loading_light.png');
+        opacity: 0;
+    }
+    .man {
+        ._br-position(159px, 568px, 150px, 150px);
+        .man_weiqi {
+            ._br-position(0px, 9px, 100px, 100px, '@{HostRes}/loading_weiqi.png');
+            ._br-animation(weiqi_change_An 2s infinite linear);
+            .an-step();
+        }
+        .man_body {
+            ._br-position(38px, 0px, '@{HostRes}/loading_man.png');
+        }
+        .man_hand {
+            ._br-position(38px, 0px, '@{HostRes}/loading_hand.png');
+            ._br-animation(rotate_leg_An 3s infinite linear);
+        }
+    }
+}
+
+.weiqi_change_An {
+    ._br-keyframes(weiqi_change_An);
+    .-frames(@-...) {
+        4% {
+            background-position: 0 0;
+        }
+        8% {
+            background-position: -100px 0;
+        }
+        12% {
+            background-position: -200px 0;
+        }
+        16% {
+            background-position: -300px 0;
+        }
+        20% {
+            background-position: -400px 0;
+        }
+        24% {
+            background-position: 0 -100px;
+        }
+        28% {
+            background-position: -100px -100px;
+        }
+        32% {
+            background-position: -200px -100px;
+        }
+        36% {
+            background-position: -300px -100px;
+        }
+        40% {
+            background-position: -400px -100px;
+        }
+        44% {
+            background-position: 0 -200px;
+        }
+        48% {
+            background-position: -100px -200px;
+        }
+        52% {
+            background-position: -200px -200px;
+        }
+        56% {
+            background-position: -300px -200px;
+        }
+        60% {
+            background-position: -400px -200px;
+        }
+        64% {
+            background-position: 0 -300px;
+        }
+        68% {
+            background-position: -100px -300px;
+        }
+        72% {
+            background-position: -200px -300px;
+        }
+        76% {
+            background-position: -300px -300px;
+        }
+        70% {
+            background-position: -400px -300px;
+        }
+        84% {
+            background-position: 0 -400px;
+        }
+        88% {
+            background-position: -100px -400px;
+        }
+        92% {
+            background-position: -200px -400px;
+        }
+        96% {
+            background-position: -300px -400px;
+        }
+        100% {
+            background-position: -400px -400px;
+        }
+    }
+}
+
+.rotate_leg_An {
+    ._br-keyframes(rotate_leg_An);
+    .-frames(@-...) {
+        0% {
+            ._br-transform(rotate(0deg));
+        }
+        25% {
+            ._br-transform(rotate(15deg));
+        }
+        50% {
+            ._br-transform(rotate(0deg));
+        }
+        75% {
+            ._br-transform(rotate(15deg));
+        }
+        100% {
+            ._br-transform(rotate(0deg));
+        }
+    }
+}

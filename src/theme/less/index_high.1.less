@@ -1,0 +1,385 @@
+//第一屏
+
+.content-slide-1{ 
+    background-color: #fff;
+
+    .cover_img_bg{
+
+    }
+
+    .back_image_container{
+        ._br-position(0px, 0px, 640px, 1140px);
+
+        .back_image{
+            ._br-position(0px, 0px, 1245px, 1245px);
+            background: no-repeat center center;
+
+            ._br-keyframes(back_image_animation); 
+                .-frames(@-...){
+                    0%  {._br-transform(translateX(0px));} 
+                    100%{._br-transform(translateX(-400px));}
+                }
+
+        }
+        .back_cloud{
+            background-image: url(images/1/back_cloud_image.png);
+            ._br-animation(back_image_animation 80s linear alternate infinite)
+        }
+        .back_grass{
+            background-image: url(images/1/back_grass_image.png);
+
+            ._br-keyframes(back_grass_animation); 
+                .-frames(@-...){
+                    0%  {._br-transform(translateX(0px));} 
+                    100%{._br-transform(translateX(-605px));}
+                }
+            ._br-animation(back_grass_animation 80s linear alternate infinite)
+        }
+
+        .logo_image{
+            ._br-position(40px, 50px, 351px, 116px);
+            background: url(images/1/logo.png) no-repeat center center;
+            ._br-animation(container_guiter_word_show_animation 3.5s linear 1)
+        }
+
+        ._br-keyframes(back_image_container_animation); 
+            .-frames(@-...){
+                0%  {opacity: 0;} 
+                100%{opacity: 1;}
+            }
+        
+    }
+
+    
+
+    .container_guiter_word{
+        position: relative;
+        margin-top: 250px;
+        width: 640px;
+        height: 312px;
+
+        // background-color: #ccc;
+
+
+        .guiter{
+            ._br-position(-10px, 0px, 364px, 312px);
+            background: url(images/1/guiter.png) no-repeat center center;
+
+            ._br-keyframes(container_guiter_word_show_animation); 
+            .-frames(@-...){
+                0%  {opacity: 0;} 
+                40% {opacity: 0;}
+                100%{opacity: 1;}
+            }
+            ._br-animation(container_guiter_word_show_animation 3.5s linear 1)
+        }
+        .word{
+            ._br-position(150px, 100px, 437px, 169px);
+            background: url(images/1/word.png) no-repeat center center;
+            ._br-animation(container_guiter_word_show_animation 3.5s linear 1)
+        }
+        ._br-keyframes(container_guiter_word_move_animation); 
+            .-frames(@-...){
+                0%  {._br-transform(translateX(-30px));} 
+                40% {._br-transform(translateX(-30px));}
+                100%{._br-transform(translateX(0px))}
+            }
+        ._br-animation(container_guiter_word_move_animation 3.5s ease-out 1)
+        
+    }
+
+    .business_word{
+        position: relative;
+        width: 640px;
+        height: 80px;
+        // background-color: #ccc;
+        margin-top: -20px;
+        div{
+            ._br-position(185px, 0px, 370px, 80px);
+            background: no-repeat center center;
+        }
+        .bimage{
+            background-image: url(images/1/bimage.png);
+            ._br-keyframes(bimage_animation); 
+            .-frames(@-...){
+                0%  {._br-transform(translateX(550px));}
+                70% {._br-transform(translateX(550px));}
+                90% {._br-transform(translateX(0px));}
+                100%{._br-transform(translateX(0px));}
+            }
+            ._br-animation(bimage_animation 5s ease-out 1 )
+        }
+        .bword{
+            background-image: url(images/1/bword.png);
+            ._br-keyframes(bword_animaiton);
+            .-frames(@-...){
+                0%  {._br-transform(translateX(-550px)); opacity: 0} 
+                70% {._br-transform(translateX(-550px)); opacity: 0}
+                90% {._br-transform(translateX(0px));}
+                100%{._br-transform(translateX(0px)); opacity: 1}
+            }
+            ._br-animation(bword_animaiton 5s ease-out 1 )
+        }
+    }
+
+    .line_image{
+        ._br-position(40px, -50px, 600px, 482px);
+        overflow: hidden;
+        // background-color: #ccc;
+
+        div{
+            // opacity: 0;
+            ._br-position(40px, 0px, 600px, 482px);
+            background: no-repeat center center;
+            overflow: hidden;
+
+            ._br-keyframes(line_image_animation); 
+            .-frames(@-...){
+                0%  {opacity: 1} 
+                50% {opacity: 0.5}
+                100%{opacity: 1}
+            }
+        }
+        .line_1{
+            background-image: url(images/1/line_1.png);
+            ._br-animation(line_image_animation 2s ease-in-out 5s infinite)
+        }
+        .line_2{
+            background-image: url(images/1/line_2.png);
+            ._br-animation(line_image_animation 2s ease-in 5.3s infinite)
+        }
+        .line_3{
+            background-image: url(images/1/line_3.png);
+            ._br-animation(line_image_animation 2s ease-in-out 5.6s infinite)
+        }
+        .line_4{
+            background-image: url(images/1/line_4.png);
+            ._br-animation(line_image_animation 2s ease-in 5.9s infinite)
+        }
+        .line_5{
+            background-image: url(images/1/line_5.png);
+            ._br-animation(line_image_animation 2s ease-in-out 6.2s infinite)
+        }
+        .line_6{
+            background-image: url(images/1/line_6.png);
+            ._br-animation(line_image_animation 2s ease-in-out 6.5s infinite)
+        }
+        .line_7{
+            background-image: url(images/1/line_7.png);
+            ._br-animation(line_image_animation 2s ease-in 6.8s infinite)
+        }
+
+        ._br-keyframes(lines_animation); 
+            .-frames(@-...){
+                0%  {opacity: 0} 
+                60% {opacity: 0}
+                100% {opacity: 1}
+            }
+        ._br-animation(lines_animation 5s ease-in )
+        
+    }
+
+    .note_image{
+        ._br-position(40px, -50px, 600px, 482px);
+        overflow: hidden;
+        // background-color: #ccc;
+        .note{
+            ._br-position(-70px, 482px, 100px, 160px);
+            div{
+                ._br-position(0px, 0px, 100px, 160px);
+            }
+
+            ._br-keyframes(note_image_animation); 
+            .-frames(@-...){
+                0%   {._br-transform(translate(150px, -80px)); opacity: 0;} 
+                10%  {._br-transform(translate(184px, -193px));} 
+                20%  {._br-transform(translate(229px, -241px)); opacity: 1;} 
+                30%  {._br-transform(translate(304px, -262px));} 
+                40%  {._br-transform(translate(408px, -268px));} 
+                50%  {._br-transform(translate(484px, -271px));} 
+                60%  {._br-transform(translate(552px, -311px));} 
+                70%  {._br-transform(translate(609px, -358px));} 
+                80%  {._br-transform(translate(655px, -403px));} 
+                90%  {._br-transform(translate(697px, -455px));}
+                100% {._br-transform(translate(710px, -562px));}
+            }
+        }
+
+        
+        @note_delay:3s;
+        .note_2_con{
+            // ._br-position(200px, 182px, 100px, 160px);
+            // background-color: #ccc;
+            ._br-keyframes(note_image_rotate_animation); 
+            .-frames(@-...){
+                0%   {._br-transform(rotateY(0deg));} 
+                100% {._br-transform(rotateY(360deg));}
+            }
+
+             .note_2{
+                background: url(images/1/note_2.png) no-repeat left top;
+                ._br-animation(note_image_rotate_animation 1.8s ease-in 4.0s infinite)
+            }
+            ._br-animation(note_image_animation 6s linear @note_delay infinite)
+        }
+        .note_4_con{
+            
+            .note_4{
+            // background-image: url(images/1/note_4.png);
+                background: url(images/1/note_4.png) no-repeat left top;
+                ._br-animation(note_image_rotate_animation 2s ease-in 4.2s infinite)
+            }
+            ._br-animation(note_image_animation 6s linear @note_delay+4s infinite)
+        }
+        .note_6_con{
+            
+            .note_6{
+            // background-image: url(images/1/note_6.png);
+                background: url(images/1/note_6.png) no-repeat center center;
+                ._br-animation(note_image_rotate_animation 1.6s ease-in 5.5s infinite)
+            }
+            ._br-animation(note_image_animation 6s linear @note_delay+10s infinite)
+        }
+
+        .note_1{
+            // background-image: url(images/1/note_1.png);
+            background: url(images/1/note_1.png) no-repeat center center;
+            ._br-animation(note_image_animation 6s linear @note_delay+15s infinite)
+        }
+
+       
+        .note_3{
+            // background-image: url(images/1/note_3.png);
+            background: url(images/1/note_3.png) no-repeat center center;
+            ._br-animation(note_image_animation 6s linear @note_delay+20s infinite)
+        }
+        
+        .note_5{
+            // background-image: url(images/1/note_5.png);
+            background: url(images/1/note_5.png) no-repeat right bottom;
+            ._br-animation(note_image_animation 6s linear @note_delay+25s infinite)
+        }
+        
+        .note_7{
+            // background-image: url(images/1/note_7.png);
+            background: url(images/1/note_7.png) no-repeat right bottom;
+            ._br-animation(note_image_animation 6s linear @note_delay+30s infinite)
+        }
+
+    }
+
+    .butterfly_static{
+        ._br-position(336px, 770px, 220px, 70px);
+        // background-color: #ccc;
+        .butterfly_1{
+            ._br-position(0px, 0px, 35px, 35px);
+            // background-color: #333;
+            background: url(images/1/butterfly_1.png) no-repeat center center;
+        }
+        .butterfly_2{
+            ._br-position(135px, 0px, 85px, 70px);
+            // background-color: #333;
+            background: url(images/1/butterfly_2.png) no-repeat center center;
+        }
+    }
+    .butterfly_gif_1{
+        ._br-position(300px, 1000px, 256px, 216px);
+        opacity: 0;
+
+        .butterfly{
+            ._br-position(0px, 0px, 256px, 216px);
+
+            background: url(images/1/butterfly_all.png) no-repeat;
+
+            ._br-keyframes(butterfly_gif_fly_animation);
+            .-frames(@-...){
+                0%  {background-position: 0px 0px;} 
+                7%  {background-position: -256px 0px;} 
+                14% {background-position: -512px 0px;} 
+                21% {background-position: -768px 0px;} 
+                28% {background-position: 0px -216px;} 
+                35% {background-position: -256px -216px;} 
+                42% {background-position: -512px -216px;}  
+                49% {background-position: -768px -216px;} 
+                56% {background-position: 0px -432px;} 
+                63% {background-position: -256px -432px;} 
+                70% {background-position: -512px -432px;} 
+                77% {background-position: -768px -432px;} 
+                84% {background-position: 0px -648px;} 
+                91% {background-position: -256px -648px;} 
+                98% {background-position: -512px -648px;} 
+                100%{background-position: -768px -648px;}
+            }
+
+            ._br-animation(butterfly_gif_fly_animation 0.6s steps(1) infinite);
+        }
+
+        ._br-keyframes(butterfly_gif_1_move_animation);
+            .-frames(@-...){
+                0%  {._br-transform(translate(0px, 0px) scale(0.8) rotate(-45deg)); opacity: 0;} 
+                10% {._br-transform(translate(-60px, -60px) scale(0.78) rotate(-45deg)); opacity: 1;} 
+                20% {._br-transform(translate(-120px, -120px) scale(0.76) rotate(-45deg) );} 
+                30% {._br-transform(translate(-180px, -180px) scale(0.74) rotate(-45deg) );} 
+                40% {._br-transform(translate(-240px, -240px) scale(0.72) rotate(-45deg) );} 
+                50% {._br-transform(translate(-300px, -300px) scale(0.7) rotate(-45deg) );} 
+                60% {._br-transform(translate(-360px, -360px) scale(0.68) rotate(-45deg) );} 
+                70% {._br-transform(translate(-420px, -420px) scale(0.66) rotate(-45deg) );} 
+                80% {._br-transform(translate(-480px, -480px) scale(0.64) rotate(-45deg) );} 
+                90% {._br-transform(translate(-540px, -540px) scale(0.62) rotate(-45deg) );} 
+                100%{._br-transform(translate(-600px, -600px) scale(0.6) rotate(-45deg) ); opacity: 1} 
+            }
+
+        ._br-animation(butterfly_gif_1_move_animation 30s linear 3s)
+    }
+    .butterfly_gif_2{
+        ._br-position(-210px, 850px, 256px, 216px);
+
+        .butterfly{
+            ._br-position(0px, 0px, 256px, 216px);
+
+            background: url(images/1/butterfly_all.png) no-repeat;
+
+            ._br-keyframes(butterfly_gif_fly_animation);
+            .-frames(@-...){
+                0%  {background-position: 0px 0px;} 
+                7%  {background-position: -256px 0px;} 
+                14% {background-position: -512px 0px;} 
+                21% {background-position: -768px 0px;} 
+                28% {background-position: 0px -216px;} 
+                35% {background-position: -256px -216px;} 
+                42% {background-position: -512px -216px;}  
+                49% {background-position: -768px -216px;} 
+                56% {background-position: 0px -432px;} 
+                63% {background-position: -256px -432px;} 
+                70% {background-position: -512px -432px;} 
+                77%{background-position: -768px -432px;} 
+                84% {background-position: 0px -648px;} 
+                91% {background-position: -256px -648px;} 
+                98% {background-position: -512px -648px;} 
+                100%{background-position: -768px -648px;}
+            }
+
+            ._br-animation(butterfly_gif_fly_animation 0.6s steps(1) infinite 0.2s);
+        }
+
+        ._br-keyframes(butterfly_gif_2_move_animation);
+            .-frames(@-...){
+                0%  {._br-transform(translate(0px, 0px) scale(0.6) rotate(60deg))} 
+                10% {._br-transform(translate(90px, -40px) scale(0.58) rotate(60deg))} 
+                20% {._br-transform(translate(180px, -80px) scale(0.56) rotate(60deg))} 
+                30% {._br-transform(translate(270px, -120px) scale(0.54) rotate(60deg))} 
+                40% {._br-transform(translate(360px, -160px) scale(0.52) rotate(60deg))} 
+                50% {._br-transform(translate(450px, -200px) scale(0.5) rotate(60deg))} 
+                60% {._br-transform(translate(540px, -240px) scale(0.48) rotate(60deg))} 
+                70% {._br-transform(translate(630px, -280px) scale(0.46) rotate(60deg))} 
+                80% {._br-transform(translate(720px, -320px) scale(0.44) rotate(60deg))} 
+                90% {._br-transform(translate(810px, -360px) scale(0.42) rotate(60deg))} 
+                100%{._br-transform(translate(900px, -400px) scale(0.4) rotate(60deg))} 
+            }
+
+        ._br-animation(butterfly_gif_2_move_animation 30s linear)
+    }
+
+    ._br-animation(back_image_container_animation 1.8s linear)
+}
+

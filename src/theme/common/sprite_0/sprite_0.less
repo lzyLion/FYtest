@@ -1,0 +1,69 @@
+
+
+/**
+ * = unit 统一元件样式
+ *******************************************************************************************************/
+/**
+ * 箭头指示元件
+ * -u-arrow
+ */
+ 
+.f_arrow {
+	position: fixed;
+	bottom: 150px;
+	left: 50%;
+	z-index: 150;
+	width: 80px;
+	height: 80px;
+	margin-left: -39px;
+}
+
+.f_arrow {
+	
+	.css_sprite01{ 
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		margin: 0 0 0 -25px;
+		width: 50px;
+		height: 28px;
+		background-position: 0 -82px;	
+		
+	}
+	.css_sprite02{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: 0 0 0 -25px;
+		width: 50px;
+		height: 28px;
+		background-position: 0 -82px;
+	}
+
+	-webkit-animation: f_arrow 1.5s infinite ease-in-out;
+	-moz-animation: f_arrow 1.5s infinite ease-in-out;
+	animation: f_arrow 1.5s infinite ease-in-out;
+	
+	
+}
+
+@-webkit-keyframes f_arrow {
+	0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+}
+@-moz-keyframes f_arrow {
+	0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
+	60% {opacity: 1;-moz-transform: translate(0,0);}
+	100% {opacity: 0;-moz-transform: translate(0,-8px);}
+}
+@keyframes f_arrow {
+	0%,30% {opacity: 0;transform: translate(0,10px);}
+	60% {opacity: 1;transform: translate(0,0);}
+	100% {opacity: 0;transform: translate(0,-8px);}
+}
+
+.css_sprite01, .css_sprite02 {
+	background-image: url("./common/sprite_0/css_sprite01.png") !important;
+	background-repeat: no-repeat !important;
+}

@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>花田音乐节</title>
+    <meta http-equiv="description" content="Home" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta ontent="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="./theme/index.css" />
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi" />
+</head>
+
+<body>
+    <div id='editor_container'></div>
+    <div class="wrap" id="main_container">
+        <!-- <section id="page_loading" class="loading-wrap"></section> -->
+        <section class='u-audio  wcomp_mainaudio' data-wsm_audio="" data-wbc="" data-wbm_audio="" data-wb_drag='{"refid":"#btn_audio2"}' data-wb_set_audio='{"refid":"#btn_audio2","audioid":"111"}' data-ws_src='diy/music.mp3' style='z-index: 1000' id='mainaudio'>
+            <p class="btn_audio" id='coffee_flow'>
+                <strong class='txt_audio z-hide' id='txt_controller'>关闭</strong><span id='btn_audio2' class=' audio_open'></span>
+            </p>
+        </section>
+        <section class="f_arrow">
+            <p class="css_sprite01"></p>
+            <p class="css_sprite02"></p>
+        </section>
+        <div class="wasai_loading">
+            <div class="wasai_text"></div>
+            <div class="man">
+                <div class="man_weiqi"></div>
+                <div class="man_body"></div>
+                <div class="man_hand"></div>
+            </div>
+        </div>
+        <!-- 封面 -->
+        <div class="content-container swiper-container">
+            <div class="content-wrapper swiper-wrapper">
+                <div class="content-slide content-slide-1 " id="content-slide-1">
+                    <div class="cover_img wf_can_anim" data-wbi="" data-wbm_photo="" data-ws_lazyimg="" data-ws_bgimg="" data-ws_src="" data-wb_drag_bgimg='' data-wb_pinch_bgimg='' data-wb_set_bgimg='' id='wc_mainimg_1'></div>
+                    <div class="back_image_container">
+                        <div class="back_cloud back_image"></div>
+                        <div class="back_grass back_image"></div>
+                        <div class="logo_image"></div>
+                    </div>
+                    
+                    <div class="container_guiter_word wf_can_anim">
+                        <div class="guiter"></div>
+                        <div class="word"></div>
+                    </div>
+                    <div class="business_word wf_can_anim">
+                        <div class="bimage"></div>
+                        <div class="bword"></div>
+                    </div>
+                    <div class="line_image wf_can_anim">
+                        <div class="line_1"></div>
+                        <div class="line_2"></div>
+                        <div class="line_3"></div>
+                        <div class="line_4"></div>
+                        <div class="line_5"></div>
+                        <div class="line_6"></div>
+                        <div class="line_7"></div>
+                    </div>
+                    <div class="note_image wf_can_anim">
+                        <div class="note_1 note"></div>
+                        <div class="note_2_con note">
+                            <div class="note_2"></div>
+                        </div>
+                        <div class="note_3 note"></div>
+                        <div class="note_4_con note">
+                            <div class="note_4"></div>
+                        </div>
+                        <div class="note_5 note"></div>
+                        <div class="note_6_con note">
+                            <div class="note_6"></div>
+                        </div>
+                        <div class="note_7 note"></div>
+                    </div>
+                    <!-- <div class="butterfly_static">
+                      <div class="butterfly_1"></div>
+                      <div class="butterfly_2"></div>
+                    </div> -->
+                    <!-- <div class="butterfly_dynamic_2 wf_can_anim">
+                        <div class="butterfly_l"></div>
+                        <div class="butterfly_m"></div>
+                        <div class="butterfly_r"></div>
+                    </div>
+                    <div class="butterfly_dynamic_1 wf_can_anim">
+                        <div class="butterfly_l"></div>
+                        <div class="butterfly_m"></div>
+                        <div class="butterfly_r"></div>
+                    </div> -->
+                    
+                    <div class="butterfly_gif_2 wf_can_anim">
+                        <div class="butterfly"></div>
+                    </div>
+                    <div class="butterfly_gif_1 wf_can_anim">
+                        <div class="butterfly"></div>
+                    </div>
+                </div>
+                <div class="content-slide content-slide-2 " id="content-slide-2">
+                    <div class="cover_img" data-wbi="" data-wbm_photo="" data-ws_lazyimg="" data-ws_bgimg="" data-ws_src="diy/2.png" data-wb_drag_bgimg='' data-wb_pinch_bgimg='' data-wb_set_bgimg='' id='wc_mainimg_2'></div>
+                    <!-- <div class="back"></div> -->
+                </div>
+                <div class="content-slide content-slide-3 " id="content-slide-3">
+                    <div class="cover_img wf_can_anim" data-wbi="" data-wbm_photo="" data-ws_lazyimg="" data-ws_bgimg="" data-ws_src="diy/3.png" data-wb_drag_bgimg='' data-wb_pinch_bgimg='' data-wb_set_bgimg='' id='wc_mainimg_3'></div>
+                    <div class="top_image"></div>
+                    <div class="bottom_image">
+                        <div class="circle" style="background-image:url('theme/images/3/circle.png')"></div>
+                        <div class="line" style="background-image:url('theme/images/3/line.png')"></div>
+                        <div class="color_lump1" style="background-image:url('theme/images/3/color_lump1.png')"></div>
+                        <div class="color_lump2" style="background-image:url('theme/images/3/color_lump2.png')"></div>
+                        <div class="color_lump3" style="background-image:url('theme/images/3/color_lump3.png')"></div>
+                        <div class="color_lump4" style="background-image:url('theme/images/3/color_lump4.png')"></div>
+                        <div class="color_lump5" style="background-image:url('theme/images/3/color_lump5.png')"></div>
+                        <div class="color_lump6" style="background-image:url('theme/images/3/color_lump6.png')"></div>
+                        <div class="color_lump7" style="background-image:url('theme/images/3/color_lump7.png')"></div>
+                        <div class="city" style="background-image:url('theme/images/3/city.png')"></div>
+                        <div class="word" style="background-image:url('theme/images/3/word.png')"></div>
+                        <div class="title" style="background-image:url('theme/images/3/title.png')"></div>
+                        <!-- <img src="theme/images/3/bottom_image.jpg"> -->
+                    </div>
+                </div>
+                <div class="content-slide content-slide-4 " id="content-slide-4">
+                    <div class="cover_img " data-wbi="" data-wbm_photo="" data-ws_lazyimg="" data-ws_bgimg="" data-ws_src="diy/4.png" data-wb_drag_bgimg='' data-wb_pinch_bgimg='' data-wb_set_bgimg='' id='wc_mainimg_4'></div>
+                    <div class="top_pin wf_can_anim">
+                        <div class="pin_1" pin_index="1">
+                            <img src="theme/images/4/pin_h_1.png" align="middle">
+                        </div>
+                        <div class="pin_2" pin_index="2">
+                            <img src="theme/images/4/pin_h_2.png">
+                        </div>
+                        <div class="pin_3" pin_index="3">
+                            <img src="theme/images/4/pin_h_3.png">
+                        </div>
+                        <div class="pin_4" pin_index="4">
+                            <img src="theme/images/4/pin_h_4.png">
+                        </div>
+                        <div class="pin_B" pin_index="5">
+                            <img src="theme/images/4/pin_h_5.png">
+                        </div>
+                        <div class="pin_B_2" pin_index="5">
+                            <img src="theme/images/4/pin_h_5.png">
+                        </div>
+                        <div class="pin_Barbecue" pin_index="6">
+                            <img src="theme/images/4/pin_h_6.png">
+                        </div>
+                        <div class="pin_cate" pin_index="7">
+                            <img src="theme/images/4/pin_h_7.png">
+                        </div>
+                        <div class="pin_Creative" pin_index="8">
+                            <img src="theme/images/4/pin_h_8.png">
+                        </div>
+                    </div>
+                    <!-- <a class="show_gray_view"></a> -->
+                    <!-- <div class="gray_view">
+                        <div class="container_view">
+                            <div class="title"></div>
+                            <div class="image"></div>
+                            <div class="close_view_">
+                                <div class="line_view"></div>
+                                <a class="close_btn_" href="javascript:"></a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="content-slide content-slide-5 " id="content-slide-5">
+                    <div class="cover_img" data-wbi="" data-wbm_photo="" data-ws_lazyimg="" data-ws_bgimg="" data-ws_src="diy/5.png" data-wb_drag_bgimg='' data-wb_pinch_bgimg='' data-wb_set_bgimg='' id='wc_mainimg_5'></div>
+                    <div class="btn_view">
+                        <a id="zongguanming" btn_index="1" style="background-image: url(theme/images/5/btn_1.png)"></span>
+                        </a>
+                        <a id="teyueguanming" btn_index="2" style="background-image: url(theme/images/5/btn_2.png)"></a>
+                        <a id="yuleguanming" btn_index="3" style="background-image: url(theme/images/5/btn_3.png)"></a>
+                        <a id="lianhezanzhu" btn_index="4" style="background-image: url(theme/images/5/btn_4.png)"></a>
+                        <a id="hezuofangshi" style="background-image: url(theme/images/5/btn_0.png)"></a>
+                        <a id="zhangpengguanming" btn_index="5" style="background-image: url(theme/images/5/btn_5.png)"></a>
+                        <a id="weiyizhiding" btn_index="6" style="background-image: url(theme/images/5/btn_6.png)"></a>
+                        <a id="qiyemingxie" btn_index="7" style="background-image: url(theme/images/5/btn_7.png)"></a>
+                        <a id="texushoumai" btn_index="8" style="background-image: url(theme/images/5/btn_8.png)"></a>
+                        <!-- &nbsp&nbsp总冠名<p></p><span>更多
+                      特约冠名<p></p><span>更多</span>
+                      娱乐冠名<p></p><span>更多</span>
+                      联合赞助<p></p><span>更多</span>
+                      合作方式
+                      帐篷冠名<p></p><span>更多</span>
+                      唯一指定<p></p><span>更多</span>
+                      企业鸣谢<p></p><span>更多</span>
+                      特许售卖<p></p><span>更多</span>
+                      -->
+                    </div>
+                </div>
+                <div class="content-slide content-slide-6" id="content-slide-6">
+                    <div class="cover_img"></div>
+                    <div class="logo_image"></div>
+                    <div class="time_place"></div>
+                    <div class="tel_all">
+                        <div class="tel_icon_1">
+                            <img src="theme/images/6/tel_icon_1.png">
+                        </div>
+                        <div class="tel_icon_2">
+                            <img src="theme/images/6/tel_icon_2.png">
+                        </div>
+
+                        <a href="tel:01088888888" class="tel_num"></a>
+                    </div>
+                    <div class="map_image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="show_detail_content">
+        <div class="content_view">
+            <div class="content">
+                <img class="top_image">
+                <img class="bottom_image">
+            </div>
+            <div class="return_btn">
+                <a>返回</a>
+            </div>
+        </div>
+    </div>
+    <div class="gray_view_container">
+        <div class="gray_view">
+            <div class="container_view">
+                <div class="title"></div>
+                <div class="image"></div>
+                <div class="close_view_">
+                    <div class="line_view"></div>
+                    <a class="close_btn_" href="javascript:"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script type="text/javascript" -->
+<!--  data-main='/xtz/code/bubu/bubu-template-h5editor-1.3/WebRoot/v1/editor/shower/shower_loader.debug.js?v=1' -->
+<!--  src="../../../editor/lib/require/require-2.1.15.min.js"></script> -->
+<script type="text/javascript" data-main='./theme/main' src="./theme/common/lib/require.min.js"></script>
+
+</html>

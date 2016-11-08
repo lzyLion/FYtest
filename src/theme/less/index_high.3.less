@@ -1,0 +1,60 @@
+//第三屏
+
+
+.color_lump_animation_CW(@time){
+	._br-animation(color_lump_rotate_CW @time linear 0s infinite);
+}
+.color_lump_animation_CCW(@time){
+	._br-animation(color_lump_rotate_CCW @time linear 0s infinite);
+}
+
+.content-slide-3{ 
+	.top_image{._br-position(0px, 0px, 640px, 318px, "images/3/top_image.jpg");}
+	// .cover_img{background-image:url(../diy/3.png);}
+	.bottom_image{
+		._br-position(0px, 320px, 640px, 680px);
+		position: relative;
+		background: center center;
+		div{
+			._br-position(0px, 0px, 640px, 640px);
+			background: center center;
+			._br-keyframes(color_lump_rotate_CW); 
+				.-frames(@-...){
+				0%  {._br-transform(rotate(0deg));}  
+				100% {._br-transform(rotate(360deg));}     
+				}
+
+		}
+		.color_lump1{
+			.color_lump_animation_CW(40s);
+		}
+		.color_lump5{
+			.color_lump_animation_CW(44s);
+		}
+		.color_lump2{
+			.color_lump_animation_CW(52s);
+		}
+		.color_lump7{
+			.color_lump_animation_CW(60s);
+		}
+		.color_lump3{
+			._br-keyframes(color_lump_rotate_CCW); 
+				.-frames(@-...){
+				0%  {._br-transform(rotate(0deg));}  
+				100% {._br-transform(rotate(-360deg));}     
+				}
+			.color_lump_animation_CCW(60s);
+		}
+		.color_lump4{
+			.color_lump_animation_CCW(40s);
+		}
+		.color_lump6{
+			.color_lump_animation_CCW(30s);
+		}
+
+	}
+	
+	
+}  
+
+

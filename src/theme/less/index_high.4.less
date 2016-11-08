@@ -1,0 +1,113 @@
+//第四屏  
+.content-slide-4{
+
+	.cover_img{background-image:url(../diy/4.png);}
+
+	.top_pin{
+		position: absolute;
+		width: 640px;
+		height: 320px;
+		// background-color: #ccc;
+		div{
+			width: 60px;
+			height: 60px;
+			background: no-repeat center center;
+			img{
+				display: block;
+				// width: 60px;
+				// height: 60px;
+				border: 0 none;
+				margin-left: 9px;
+				margin-top: 2.5px;
+				._br-animation(pin_1_animation 1.5s ease-out 0s infinite);
+			}
+
+			._br-keyframes(pin_land_animation); 
+			.-frames(@-...){
+				0%  {top: -20px; opacity: 0;} 
+				50% {top: 0px; opacity: 1;}     
+				80% {top: -7px;}
+				100%{top: 0px; }
+			}
+			
+
+		}
+		._br-animation(pin_land_animation 2s ease-in infinite);
+
+		.pin_1{
+			._br-position(556px, 144px);
+			background-image: url(images/4/pin_1.png);
+		}
+		.pin_2{
+			._br-position(-2px, 110px);
+			background-image: url(images/4/pin_2.png);
+		}
+		.pin_3{
+			._br-position(465px, -5px);
+			background-image: url(images/4/pin_3.png);
+		}
+		.pin_4{
+			._br-position(418px, 26px);
+			background-image: url(images/4/pin_4.png);
+		}
+		.pin_B{
+			._br-position(346px, 192px);
+			background-image: url(images/4/pin_5.png);
+		}
+		.pin_B_2{
+			._br-position(458px, 220px);
+			background-image: url(images/4/pin_5.png);
+		}
+		.pin_Barbecue{
+			._br-position(180px, 84px);
+			background-image: url(images/4/pin_6.png);
+		}
+		.pin_cate{
+			._br-position(152px, 144px);
+			background-image: url(images/4/pin_7.png);
+		}
+		.pin_Creative{
+			._br-position(212px, 134px);
+			background-image: url(images/4/pin_8.png);
+		}
+
+		._br-keyframes(pin_1_animation); 
+		.-frames(@-...){
+			0%  {opacity: 0;} 
+			100% {opacity: 1;}     
+		}
+
+
+	}
+
+
+	// .show_gray_view{
+	// 	position: absolute;
+	// 	display: block;
+	// 	width: 100px;
+	// 	height: 100px;
+	// 	background-color: #ccc;
+	// }
+	
+	
+}
+
+
+		
+		
+
+
+/*
+.content-slide-4{
+.text_bg{top:595px;left:167px; }
+.text_en{._br-position(206px,777px,247px,71px,'images/en3.png'); }
+.wf_text{top:860px;left:267px;}
+ &.horizontal{
+.cover_img{width:640px;height:530px;left:0px;top:188px;}
+.text_bg{top:620px;left:100px;}
+.text_inside{._br-transform(rotate(45deg));}
+.text_en{top:780px;left:111px;}
+.wf_text{top:865px;left:168px;}
+}
+}
+*/

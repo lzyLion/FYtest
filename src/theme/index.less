@@ -1,0 +1,201 @@
+@import (inline) "/css/animate.css";
+@import "/common/common.less";
+@import "index_high.less";
+@import "less/loading.less";
+//@w_debug:true;
+@screen_width:640px;
+
+//@import "shower_wide.less";
+//@import "shower_high.less";
+body{background-color: #000;}
+*{ box-sizing:border-box;}
+.wrap {
+	z-index: 1;
+	background-color: #000;
+	width: 640px; 
+	position: absolute;
+	left: 50%;
+	 font-family: arial,'Microsoft YaHei';
+	margin-left: -320px;  
+	height: 100%;
+	overflow: hidden;     
+	text-align: center;
+	.content-container {
+		display:none;
+		height: 100%;
+		width: 100%;
+		//visibility:hidden;
+		.content-wrapper{
+			height: 100%;
+			width: 100%;
+			position:relative;
+			.content-slide{display:table;
+				position: relative;
+				width:100%; 
+				height:100%; 
+				background-color: #000;
+				//background-repeat: no-repeat; 
+				overflow: hidden; 
+			}
+		}
+
+	}
+
+	//.content-slide-active .wf_can_anim{ display: block;}
+}
+
+.f_arrow{ pointer-events: none;}
+
+.show_detail_content{
+
+	z-index: 2;
+	display: none;
+	background-color: #000;
+	width: 640px; 
+	position: absolute;
+	left: 50%;
+	font-family: arial,'Microsoft YaHei';
+	margin-left: -320px;  
+	height: 100%;
+	overflow: hidden;     
+	text-align: center;
+	background-image: url(../diy/5.png);
+
+	.content_view{
+		position: fixed;
+		width: 640px;
+		// height: 500px;
+		// left: 300px;
+		top: 370px;
+		bottom: 0px;
+		// background-color: #ccc;
+
+		._br-keyframes(content_view_show_animation); 
+			.-frames(@-...){
+				// 0%  {._br-transform(translateX(700px));} 
+				// 100%{._br-transform(translateX(0px));}
+				0%  {left:700px;} 
+				100%{left:0px;}
+			}
+
+		.content{
+			position: fixed;
+			top: 370px;
+			bottom: 120px;
+			width: 640px;
+			overflow: scroll;
+			padding-top: 40px;
+			padding-bottom: 20px;
+			img{
+				margin-top: 15px;
+				display: block;
+			}
+			.top_image{
+				margin-left: 30px;
+			}
+			.bottom_image{
+				margin-left: 80px;
+			}
+		}
+
+		.return_btn{
+			position: fixed;
+			// top: 370px;
+			width: 640px;
+			height: 120px;
+			// position: fixed;
+			bottom: 0px;
+
+			background: url(images/5/return_background_image.png) no-repeat center center;
+			a{
+				._br-position(204px, 26px, 229px, 66px);
+				display: block;
+				background: url(images/5/return_image.png) no-repeat center center;
+				font-size: 32px;
+				line-height: 66px;
+				text-indent: 45px;
+				letter-spacing: 40px;
+				text-align: center;
+				color: white;
+			}
+		}
+		
+	}
+
+}
+
+.gray_view_container{
+	z-index: 2;
+	display: none;
+	background-color: #000;
+	width: 640px; 
+	position: absolute;
+	left: 50%;
+	font-family: arial,'Microsoft YaHei';
+	margin-left: -320px;  
+	height: 100%;
+	overflow: hidden;     
+	text-align: center;
+
+	.gray_view{
+		// display: none;
+		position: relative;
+		// ._br-filter(50px);
+		// background-color: rgba(0, 0, 0, 0.4);
+		background-image: url(images/4/blur_image.png);
+		width: 640px;
+		height: 1140px;
+		.container_view{
+			position: relative;
+			// ._br-filter(50px);
+			// background-color: rgba(0, 0, 0, 0.4);
+			width: 640px;
+			height: 1140px;
+			.title{
+				._br-position(0px, 200px, 640px, 70px);
+				// text-align: center;
+				color: white;
+				font-size: 34px;
+				line-height: 70px;
+				background: no-repeat center center;
+			}
+			.image{
+				// display: block;
+				._br-position(34px, 290px, 570px, 413px);
+				// border: 1px solid white;
+				// background-color: #ccc;
+				background: no-repeat center center;
+			}
+			.close_view_{
+				._br-position(278px, 680px, 84px, 230px);
+				// background-color: #ccc;
+				.line_view{
+					margin-left: 41.5px;
+					width: 1px;
+					height: 140px;
+					background-color: white;
+				}
+				.close_btn_{
+					display: block;
+					width: 82px;
+					height: 82px;
+					// border: 1px solid white;
+					// border-radius: 41px;
+					// background-color: #bbb;
+					background: no-repeat -3px -235px;
+					background-image: url(images/4/close_btn.png);
+				}
+			}
+		}
+		._br-keyframes(gray_view_animation); 
+		.-frames(@-...){
+			0%  {._br-transform(scale(0)); opacity: 0;} 
+			100% {._br-transform(scale(1.0)); opacity: 1;}     
+		}
+
+	}
+}
+
+
+
+

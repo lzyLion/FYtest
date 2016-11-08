@@ -1,0 +1,27 @@
+//第二屏
+
+.content-slide-2{
+
+	.cover_img{background-image:url(../diy/2.png);}
+
+	._br-keyframes(cover_image_animation); 
+		.-frames(@-...){
+			0%  {opacity: 0;}  
+			100% {opacity: 1;}     
+		}
+	// ._br-animation(cover_image_animation 10s);
+}
+/*
+.content-slide-2{ 
+.text_bg{top:607px;left:165px; }
+.text_en{._br-position(227px,766px,206px,68px,'images/en1.png'); }
+.wf_text{top:852px;left:244px;}
+&.horizontal{
+.cover_img{width:640px;height:530px;left:0px;top:188px;}
+.text_bg{top:620px;left:270px;}
+.text_inside{._br-transform(rotate(-30deg));}
+.text_en{top:775px;left:355px;}
+.wf_text{top:860px;left:362px;}
+}
+}    
+*/
